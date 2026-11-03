@@ -1,87 +1,300 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShadyShop - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="/src/output.css" rel="stylesheet">
 </head>
-<body>
 
-<!-- header -->
-<div id="header">
-  <div id="logo">ShadyShop</div>
-  <div id="nav">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="index.html#categories">Categories</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="cart.html" id="cart">Cart</a>
-  </div>
-</div>
+<body class="bg-gray-50 text-gray-800">
 
-<!-- content -->
-<div id="content">
-  <!-- hero banner -->
-  <div id="hero">
-    <div id="hero-text">
-      <h2>Big Sale is Live!</h2>
-      <p>Get the best deals on electronics, clothing and accessories. Shop now and save up to 40% on your favourite products.</p>
-      <a href="#featured" class="link-btn">Shop Now</a>
+  <!-- Header -->
+  <header class="flex flex-col gap-4 bg-green-600 px-6 py-5 text-white md:flex-row md:items-center md:justify-between">
+
+    <div id="logo" class="text-2xl font-bold tracking-wider">
+      ShadyShop
     </div>
-    <img src="images/hero.jpg" alt="Sale banner">
-  </div>
 
-  <!-- featured products -->
-  <h2 id="featured">Featured Products</h2>
-  <div class="product-list">
-    <div class="product">
-      <img src="images/p1.jpg" alt="Wireless Headphones">
-      <h3>Wireless Headphones</h3>
-      <p class="price">&#8377;1999</p>
-      <p>Over-ear wireless headphones</p>
-      <button>View Details</button>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/p2.jpg" alt="Smart Watch">
-      <h3>Smart Watch</h3>
-      <p class="price">&#8377;2499</p>
-      <p>Fitness smart watch</p>
-      <button>View Details</button>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/p4.jpg" alt="Cotton T-Shirt">
-      <h3>Cotton T-Shirt</h3>
-      <p class="price">&#8377;499</p>
-      <p>Soft round-neck t-shirt</p>
-      <button>View Details</button>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/p7.jpg" alt="School Backpack">
-      <h3>School Backpack</h3>
-      <p class="price">&#8377;899</p>
-      <p>Spacious backpack</p>
-      <button>View Details</button>
-      <button>Add to Cart</button>
-    </div>
-  </div>
+    <nav id="nav" class="flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium md:text-base">
+      <a href="index.html" class="transition hover:text-green-200">Home</a>
+      <a href="products.html" class="transition hover:text-green-200">Products</a>
+      <a href="index.html#categories" class="transition hover:text-green-200">Categories</a>
+      <a href="about.html" class="transition hover:text-green-200">About Us</a>
+      <a href="contact.html" class="transition hover:text-green-200">Contact Us</a>
+      <a href="cart.html" id="cart"
+        class="rounded-lg bg-white px-5 py-2 font-semibold text-green-700 transition hover:bg-green-100">
+        Cart
+      </a>
+      <button id="color-mode"
+        class="rounded-lg bg-white px-5 py-2 font-semibold text-green-700 transition hover:bg-green-100">
+        Dark
+    </button>
+    </nav>
+  </header>
 
-  <!-- categories -->
-  <h2 id="categories">Categories</h2>
-  <div class="category-list">
-    <a href="products.html" class="category"><img src="images/electronics.jpg" alt="Electronics"><h3>Electronics</h3></a>
-    <a href="products.html" class="category"><img src="images/clothing.jpg" alt="Clothing"><h3>Clothing</h3></a>
-    <a href="products.html" class="category"><img src="images/accessories.jpg" alt="Accessories"><h3>Accessories</h3></a>
-  </div>
-</div>
+  <!-- Main Content -->
+  <main id="content" class="mx-auto max-w-7xl px- py-10">
 
-<!-- footer -->
-<div id="footer">
-  <p>&copy; 2026 ShopEase. All rights reserved.</p>
-  <p><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">X</a></p>
-</div>
 
+    <!-- Hero Banner -->
+    <section id="hero"
+      class="mb-16 grid items-center gap-8 overflow-hidden rounded-2xl bg-green-100 p-6 md:grid-cols-2 md:p-12">
+
+      <div id="hero-text">
+        <span class="mb-4 inline-block rounded-full bg-green-200 px-4 py-2 text-sm font-semibold text-green-800">
+          Special Offers
+        </span>
+
+        <h1 class="mb-5 text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
+          Big Sale is Live!
+        </h1>
+
+        <p class="mb-8 max-w-lg text-base leading-7 text-gray-600 md:text-lg">
+          Get the best deals on electronics, clothing and accessories.
+          Shop now and save up to 40% on your favourite products.
+        </p>
+
+        <a href="#featured"
+          class="inline-block rounded-lg bg-green-600 px-7 py-3 font-semibold text-white shadow-md transition hover:bg-green-700 hover:shadow-lg">
+          Shop Now →
+        </a>
+      </div>
+
+      <img src="images/hero.jpg" alt="Sale banner" class="h-64 w-full rounded-xl object-cover shadow-md md:h-80">
+    </section>
+
+    <!-- Featured Products -->
+    <section class="mb-16">
+      <div class="mb-8 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 id="featured" class="text-3xl font-bold text-gray-900">
+            Featured Products
+          </h2>
+          <p class="mt-2 text-gray-500">Discover our popular picks.</p>
+        </div>
+
+        <a href="products.html" class="font-semibold text-green-700 hover:text-green-900">
+          View All →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Product 1 -->
+        <article
+          class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/p1.jpg" alt="Wireless Headphones" class="h-52 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-lg font-bold">Wireless Headphones</h3>
+            <p class="mt-2 text-2xl font-bold text-green-700">₹1,999</p>
+            <p class="mt-2 text-sm text-gray-500">Over-ear wireless headphones</p>
+            <div class="mt-5 flex gap-2">
+              <button
+                class="flex-1 rounded-lg border border-green-600 px-3 py-2 text-sm font-semibold text-green-700 transition hover:bg-green-50">
+                View Details
+              </button>
+              <button
+                class="flex-1 rounded-lg bg-green-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article
+          class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/p2.jpg" alt="Smart Watch" class="h-52 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-lg font-bold">Smart Watch</h3>
+            <p class="mt-2 text-2xl font-bold text-green-700">₹2,499</p>
+            <p class="mt-2 text-sm text-gray-500">Fitness smart watch</p>
+            <div class="mt-5 flex gap-2">
+              <button
+                class="flex-1 rounded-lg border border-green-600 px-3 py-2 text-sm font-semibold text-green-700 transition hover:bg-green-50">
+                View Details
+              </button>
+              <button
+                class="flex-1 rounded-lg bg-green-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article
+          class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/p4.jpg" alt="Cotton T-Shirt" class="h-52 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-lg font-bold">Cotton T-Shirt</h3>
+            <p class="mt-2 text-2xl font-bold text-green-700">₹499</p>
+            <p class="mt-2 text-sm text-gray-500">Soft round-neck t-shirt</p>
+            <div class="mt-5 flex gap-2">
+              <button
+                class="flex-1 rounded-lg border border-green-600 px-3 py-2 text-sm font-semibold text-green-700 transition hover:bg-green-50">
+                View Details
+              </button>
+              <button
+                class="flex-1 rounded-lg bg-green-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article
+          class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/p7.jpg" alt="School Backpack" class="h-52 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-lg font-bold">School Backpack</h3>
+            <p class="mt-2 text-2xl font-bold text-green-700">₹899</p>
+            <p class="mt-2 text-sm text-gray-500">Spacious backpack</p>
+            <div class="mt-5 flex gap-2">
+              <button
+                class="flex-1 rounded-lg border border-green-600 px-3 py-2 text-sm font-semibold text-green-700 transition hover:bg-green-50">
+                View Details
+              </button>
+              <button
+                class="flex-1 rounded-lg bg-green-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="mb-10">
+      <h2 id="categories" class="mb-3 text-3xl font-bold text-gray-900">
+        Shop by Category
+      </h2>
+      <p class="mb-8 text-gray-500">Find exactly what you're looking for.</p>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <a href="products.html"
+          class="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/electronics.jpg" alt="Electronics"
+            class="h-56 w-full object-cover transition duration-300 group-hover:scale-105">
+          <div class="p-5">
+            <h3 class="text-xl font-bold transition group-hover:text-green-700">Electronics →</h3>
+          </div>
+        </a>
+
+        <a href="products.html"
+          class="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/clothing.jpg" alt="Clothing"
+            class="h-56 w-full object-cover transition duration-300 group-hover:scale-105">
+          <div class="p-5">
+            <h3 class="text-xl font-bold transition group-hover:text-green-700">Clothing →</h3>
+          </div>
+        </a>
+
+        <a href="products.html"
+          class="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="images/accessories.jpg" alt="Accessories"
+            class="h-56 w-full object-cover transition duration-300 group-hover:scale-105">
+          <div class="p-5">
+            <h3 class="text-xl font-bold transition group-hover:text-green-700">Accessories →</h3>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-gray-900 px-5 py-8 text-center text-gray-300">
+    <p>&copy; 2026 ShadyShop. All rights reserved.</p>
+
+    <div class="mt-4 flex justify-center gap-5">
+      <a href="#" class="transition hover:text-green-400">Facebook</a>
+      <a href="#" class="transition hover:text-green-400">Instagram</a>
+      <a href="#" class="transition hover:text-green-400">X</a>
+    </div>
+  </footer>
+
+<script>
+
+const body = document.body;
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const products = document.querySelectorAll("article");
+const colorModeBtn = document.getElementById("color-mode");
+const header = document.querySelector("Header");
+const addCartButton = document.querySelectorAll("article>div>div>button:nth-child(2)");
+const articleDetailButton = document.querySelectorAll("article>div>div>button:nth-child(1)");
+const mainSection = document.querySelector("main>section");
+const paragraph = document.querySelectorAll("p");
+const heading = document.querySelectorAll("h1, h2");
+// const paragraphText = 
+
+isDark = false;
+colorModeBtn.addEventListener("click", () => {
+  if(!isDark){
+    body.className = "bg-black";
+    colorModeBtn.className = "rounded-lg bg-black px-5 py-2 font-semibold text-white-700 transition hover:bg-white hover:text-black"
+    header.className = "flex flex-col gap-4 bg-gray-900 px-6 py-5 text-white md:flex-row md:items-center md:justify-between"
+    colorModeBtn.innerHTML = "Light";
+    addCartButton.forEach(btn => {
+      btn.className = "flex-1 rounded-lg bg-black px-3 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black";
+    });
+    articleDetailButton.forEach(btn => {
+      btn.className = "flex-1 rounded-lg border border-black px-3 py-2 text-sm font-semibold text-black transition hover:bg-green-50";
+    })
+    mainSection.className = "mb-16 grid items-center gap-8 overflow-hidden rounded-2xl bg-gray-500 p-6 md:grid-cols-2 md:p-12";
+    paragraph.forEach(p => {
+      p.className = "mb-8 max-w-lg text-base leading-7 text-white md:text-lg";
+    })
+    heading.forEach(h => {
+      h.className = "mb-5 text-4xl font-extrabold leading-tight text-white md:text-5xl";
+    })
+    isDark = true;
+  }
+  else if (isDark){
+    body.className = "bg-gray-100";
+    colorModeBtn.className = "rounded-lg bg-white px-5 py-2 font-semibold text-green-700 transition hover:bg-green-100";
+    colorModeBtn.innerHTML = "Dark";
+    header.className = "flex flex-col gap-4 bg-green-600 px-6 py-5 text-white md:flex-row md:items-center md:justify-between";
+    addCartButton.forEach(btn => {
+      btn.className = "flex-1 rounded-lg bg-green-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700";
+    });
+    articleDetailButton.forEach(btn => {
+      btn.className = "flex-1 rounded-lg border border-green-600 px-3 py-2 text-sm font-semibold text-green-700 transition hover:bg-green-50"
+    })
+    mainSection.className = "mb-16 grid items-center gap-8 overflow-hidden rounded-2xl bg-green-100 p-6 md:grid-cols-2 md:p-12";
+    paragraph.forEach(p => {
+      p.className = "mb-8 max-w-lg text-base leading-7 text-black md:text-lg";
+    })
+    heading.forEach(h => {
+      h.className = "mb-5 text-4xl font-extrabold leading-tight text-black md:text-5xl";
+    })
+    isDark = false;
+  }
+  
+})
+
+function searchProducts() {
+  const searchText = searchInput.value.toLowerCase().trim();
+
+  products.forEach(function (product) {
+    const name = product.querySelector("h3").textContent.toLowerCase();
+
+    if (name.includes(searchText)) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+</script>
 </body>
+
 </html>
